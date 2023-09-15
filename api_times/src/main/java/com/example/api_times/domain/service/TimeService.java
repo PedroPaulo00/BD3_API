@@ -7,7 +7,6 @@ import com.example.api_times.domain.model.Time;
 import com.example.api_times.domain.repository.TimeRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TimeService {
@@ -26,8 +25,8 @@ public class TimeService {
 
     
 
-    public Time salvarTime(Time time) {
-        return timeRepository.save(time);
+    public Time salvarTime(Time Time) {
+        return timeRepository.save(Time);
     }
 
     public void excluirTime(Long id) {

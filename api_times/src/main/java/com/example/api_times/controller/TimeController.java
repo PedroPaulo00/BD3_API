@@ -10,7 +10,6 @@ import com.example.api_times.domain.model.Time;
 import com.example.api_times.domain.service.TimeService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/times")
@@ -27,8 +26,8 @@ public class TimeController {
     @GetMapping("/{id}")
 public ResponseEntity<Time> buscarTimePorId(@PathVariable Long id) {
     try {
-        Time time = timeService.buscarTimePorId(id);
-        return ResponseEntity.ok(time);
+        Time Time = timeService.buscarTimePorId(id);
+        return ResponseEntity.ok(Time);
     } catch (RuntimeException e) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     }
@@ -36,8 +35,8 @@ public ResponseEntity<Time> buscarTimePorId(@PathVariable Long id) {
 
 
     @PostMapping
-    public Time criarTime(@RequestBody Time time) {
-        return timeService.salvarTime(time);
+    public Time criarTime(@RequestBody Time Time) {
+        return timeService.salvarTime(Time);
     }
 
     @PutMapping("/{id}")
