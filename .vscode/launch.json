@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiTimesApplication<api_times>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.api_times.ApiTimesApplication",
+            "projectName": "api_times",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
